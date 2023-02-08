@@ -1,0 +1,236 @@
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.search-contain {
+	.search-content {
+		border: none;
+	}
+	input[type="text"] {
+		outline: none;
+		border: none;
+		background: #FFF;
+		width: 100%;
+		height: 40px;
+		padding-left: 15px;
+		box-sizing: border-box;
+		font-family: arial;
+		font-size: 13px;
+		border-left: 3px solid var(--main-color);
+		color: #3a3a3a;
+	}
+}
+#search_form {
+	transform: rotateY(90deg);
+	transition-property: all;
+	transition-duration: 1.5s;
+	width: 0px;
+	transform-origin: right;
+	position: relative;
+	.dclose {
+		display: inline;
+		position: absolute;
+		cursor: pointer;
+		box-sizing: border-box;
+		right: 0px;
+		width: 40px;
+		height: 40px;
+		background: var(--main-color);
+		text-align: center;
+		line-height: 36px;
+		span {
+			cursor: pointer;
+			font-size: 25px;
+			color: #fff;
+		}
+	}
+}
+.button_a {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	background: none;
+	border: none;
+	right: 0px;
+	top: 25px;
+	cursor: pointer;
+	outline: none;
+	svg {
+		fill: #222222;
+	}
+}
+.button-search {
+	outline: none;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	background: none;
+	border: none;
+	right: 40px;
+	top: 0px;
+	cursor: pointer;
+	svg {
+		fill: var(--main-color);
+		width: 18px;
+		height: 18px;
+	}
+	i {
+		width: 26px;
+		height: 29px;
+		background-position: 0px 0px;
+		display: block;
+		margin-left: 11px;
+		margin-top: 4px;
+	}
+}
+.autocomplete-suggestions {
+	position: absolute;
+	top: 4px;
+	right: -5px;
+	margin: 6px 0 0 6px;
+	_background: none;
+	_margin: 1px 0 0 0;
+	border: 1px solid #ececec;
+	background: #fff;
+	cursor: default;
+	overflow: auto;
+	margin: 0 0px 6px -1px;
+	width: 100%;
+	top: 31px;
+	left: 101px;
+	div {
+		cursor: pointer;
+		width: 100%;
+		display: inline-block;
+		clear: both;
+		padding: 0;
+		margin: 0;
+		margin-bottom: -5px;
+		a {
+			display: inline-block;
+			margin: 0;
+			padding: 6px 3%;
+			width: 100%;
+			font-size: 13px;
+			color: #333;
+			background: #fff;
+			clear: both;
+			border-bottom: 1px solid #eee;
+			box-sizing: border-box;
+			&:link {
+				display: inline-block;
+				margin: 0;
+				padding: 6px 3%;
+				width: 100%;
+				font-size: 13px;
+				color: #333;
+				background: #fff;
+				clear: both;
+				border-bottom: 1px solid #eee;
+				box-sizing: border-box;
+			}
+			&:visited {
+				display: inline-block;
+				margin: 0;
+				padding: 6px 3%;
+				width: 100%;
+				font-size: 13px;
+				color: #333;
+				background: #fff;
+				clear: both;
+				border-bottom: 1px solid #eee;
+				box-sizing: border-box;
+			}
+			&:hover {
+				background: #ececec;
+			}
+			img {
+				width: 64px;
+				float: left;
+				margin-right: 20px;
+			}
+			label {
+				font-weight: normal;
+				cursor: pointer;
+				margin: 0;
+				float: left;
+			}
+			span {
+				display: block;
+				clear: both;
+				cursor: pointer;
+				margin: 0;
+				padding: 0;
+			}
+			span.price {
+				color: #fd0000;
+				padding-top: 10px;
+			}
+		}
+	}
+	.autocomplete-group {
+		padding: 8px 3%;
+		width: 100%;
+		background: #f9f9f9;
+		box-sizing: border-box;
+	}
+	div.last {
+		border: none;
+	}
+	strong {
+		font-weight: 500;
+		color: #0083bf;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 15px;
+		background-color: #EBEBEB;
+	}
+	&::-webkit-scrollbar {
+		width: 5px;
+		background-color: #EBEBEB;
+		border-radius: 15px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 15px;
+		background: var(--main-color);
+		border: 1px solid #EBEBEB;
+	}
+}
+@media all and (max-width: 1024px) {
+	.button_a {
+		top: 6px;
+	}
+}
+@media only screen and (max-width: 1140px) {
+	.button-search {
+		background: none;
+	}
+}
+@media only screen and (min-width: 1180px) {
+	.autocomplete-suggestions {
+		width: 550px !important;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.search-contain {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.autocomplete-suggestions {
+		top: 30px;
+		left: 10px;
+	}
+}

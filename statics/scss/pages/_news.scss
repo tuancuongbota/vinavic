@@ -1,0 +1,151 @@
+.newslist_tabs {
+	.news-tabs {
+		width: 100%;
+		text-align: center;
+		margin: 20px auto 0px;
+		li {
+			display: inline-block;
+			margin: 0 40px;
+			position: relative;
+			cursor: pointer;
+			&:after {
+				width: 2px;
+				height: 20px;
+				position: absolute;
+				content: '';
+				right: -39px;
+				top: 5px;
+				background: #888;
+			}
+			span {
+				color: #000;
+				text-transform: uppercase;
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 30px;
+			}
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+		}
+		.active {
+			span {
+				color: var(--main-color);
+				border-bottom: 2px solid;
+			}
+		}
+	}
+	.tab-content {
+		margin-top: 50px;
+		.list_news {
+			margin: 0 -15px;
+			.item {
+				width: calc(50% - 30px);
+				margin: 0 15px 80px;
+				float: left;
+				position: relative;
+				padding-bottom: 20px;
+				.img {
+					min-height: 200px;
+				}
+				.info_news {
+					position: absolute;
+					width: 94%;
+					left: 3%;
+					padding: 25px;
+					box-sizing: border-box;
+					box-shadow: 0 1px 11px #8a8a8a42;
+					top: 80%;
+					background: #fff;
+					.title {
+						a {
+							font-size: 20px;
+							font-weight: 600;
+						}
+					}
+					.date {
+						font-size: 15px;
+						margin-top: 5px;
+						color: #818181;
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 600px) {
+	.newslist_tabs {
+		.news-tabs {
+			margin-top: -5px;
+		}
+		.tab-content {
+			margin-top: 20px;
+			.list_news {
+				.item {
+					margin-bottom: 10px;
+					padding-bottom: 0px;
+					.img {
+						min-height: 100px;
+					}
+					.info_news {
+						position: relative;
+						width: 100%;
+						left: unset;
+						.title {
+							height: 44px;
+							overflow: hidden;
+							a {
+								font-size: 15px;
+								line-height: 20px;
+							}
+						}
+						.date {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 800px) {
+	.newslist_tabs {
+		.news-tabs {
+			li {
+				margin: 0 10px;
+				&:after {
+					top: 9px;
+					right: -13px;
+					height: 15px;
+				}
+				span {
+					font-size: 16px;
+				}
+			}
+		}
+		.tab-content {
+			.list_news {
+				.item {
+					.info_news {
+						padding: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 1024px) {
+	.newslist_tabs {
+		.tab-content {
+			.list_news {
+				margin: 0 -5px;
+				.item {
+					width: calc(50% - 10px);
+					margin: 0 5px 80px;
+				}
+			}
+		}
+	}
+}
