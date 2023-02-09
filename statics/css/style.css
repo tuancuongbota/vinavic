@@ -2295,10 +2295,10 @@ footer .support .item a:hover { color: #fff900; }
 .btn_regis:focus { background-color: var(--main-color); }
 .btn_regis:active { background-color: var(--main-color); }
 
-#pav-slideShow a { display: grid; }
-#pav-slideShow .owl-item { position: relative; }
-#pav-slideShow .owl-item:after { width: 100%; height: 100%; content: ''; position: absolute; background: #85858599; top: 0px; left: 0px; }
-#pav-slideShow .center:after { display: none; }
+.main_wrapper_product_details #pav-slideShow a { display: grid; }
+.main_wrapper_product_details #pav-slideShow .owl-item { position: relative; }
+.main_wrapper_product_details #pav-slideShow .owl-item:after { width: 100%; height: 100%; content: ''; position: absolute; background: #85858599; top: 0px; left: 0px; }
+.main_wrapper_product_details #pav-slideShow .center:after { display: none; }
 
 .thumb_slideshow { background: #262626; }
 .thumb_slideshow img { max-width: 100%; height: auto; }
@@ -3083,4 +3083,5 @@ ul li.level1 span:hover { color: var(--main-color); }
 .block_share_hotline .hotline-athis .a_tw .bor_share { background-color: #4EA6EA; color: #fff; }
 .block_share_hotline .hotline-athis .a_ytb .bor_share { background-color: #EF1B0D; color: #fff; }
 .block_share_hotline .hotline-athis .a_p .bor_share { background-color: #9B1120; color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
