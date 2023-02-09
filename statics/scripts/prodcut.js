@@ -1,5 +1,6 @@
 $(function() {
     sticky_compare();
+	$('.cboxElement').attr('data-lightbox','roadtrip');
 });
 function sticky_compare(){
 	var width = $(window).width();
