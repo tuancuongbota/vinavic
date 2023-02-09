@@ -112,6 +112,14 @@ $('.videos_block_body .video_item .video_item_inner_has_img').click(function(){
 	$(this).html('<iframe src="'+link_video+'?rel=0&autoplay=1&enable_js=1&'+param+'" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="100%" height="'+height+'" frameborder="0" allowfullscreen="false">');
 	$(this).removeClass('video_item_inner_has_img');
 });
+$('#sm_form_2').click(function(){
+	if(!check_Formsubmit_2()){
+		return false;
+    }
+    else{
+    	$('#buy_fast_form_2').submit();
+    }
+  });
 $('.news_cat').click(function(){
    $('.news_cat').removeClass('active');
    $(this).addClass('active');
@@ -565,3 +573,61 @@ setTimeout( function call_lazy(){
  
  
    });
+   function check_Formsubmit_2()
+{
+	// return false;
+	$('label.label_error').prev().remove();
+	$('label.label_error').remove();
+
+
+	if(!notEmpty("name_buy_fast_2","Bạn phải nhập họ tên"))
+	{
+		return false;
+	}
+
+	if(!notEmpty("email_or_zalo_2","Bạn phải nhập Email"))
+	{
+		return false;
+	}
+	if(!emailValidator("email_or_zalo_2","Email nhập không hợp lệ")){
+		return false;
+	}
+	if(!notEmpty("telephone_buy_fast_2","Bạn phải nhập số phone")){
+		return false;
+	}
+
+	if(!isPhone("telephone_buy_fast_2","Bạn nhập số điện thoại không hợp lệ")){
+		return false;
+	}
+		$('#sm_form_2').prop("disabled", true);
+		return true;
+
+}
+
+
+function close_f2(){
+	$('#form_2').addClass('hide');
+};
+function open_f(){
+	$('#form_2').removeClass('hide');
+};
+$(function(){
+	var date = new Date();
+	var minutes = 60;
+	date.setTime(date.getTime() + (minutes * 60 * 24));
+	$("#close_form_2").click(function() {
+		$.cookie('close_form_2', 'close_form_2', { expires: date});
+		$('#form_2').addClass('hide');
+	});
+});
+
+$(function() {
+	if($.cookie('close_form_2') == null) {
+		setTimeout(function(){
+			$('#form_2').removeClass('hide');
+		},5000)
+
+	}else{
+		$('#form_2').addClass('hide');
+	};
+});
