@@ -1873,6 +1873,9 @@ tt {
 	}
 }
 .main_wrapper {
+	&.main_wrapper_product_details{
+		margin-top: 0;
+	}
 	.left-col {
 		.block {
 			margin-bottom: 20px;
