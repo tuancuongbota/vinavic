@@ -89,6 +89,64 @@ $(document).ready(function () {
 			},
 		}
 	});
+   $('.related_content .item').removeClass('item_block');
+	$('.related_content .item').removeClass('hide');
+
+	$('.related_content').owlCarousel({
+		loop:true,
+		nav:true,
+		margin: 30,
+		navText: [
+         "‹",
+         "›"
+      ],
+		dots:false,
+		pagination:true,
+		autoplay: true,
+		autoplayTimeout:6000,
+		items:1,
+		lazyLoad : true, 
+		responsive : {
+			0 : {
+				items : 1,
+				margin: 10,
+
+			},
+			480 : {
+				items : 2.5,
+			},
+			768 : {
+				items : 3,
+			}
+		}
+	});
+   $('.related_projects_content').owlCarousel({
+		loop:true,
+		nav:true,
+		margin: 30,
+		navText: [
+         "‹",
+         "›"
+      ],
+		dots:false,
+		pagination:true,
+		autoplay: true,
+		autoplayTimeout:6000,
+		items:1,
+		lazyLoad : true, 
+		responsive : {
+			0 : {
+				items : 1,
+
+			},
+			480 : {
+				items : 1.5,
+			},
+			768 : {
+				items : 2,
+			}
+		}
+	});
    $('.block-strengths2-style2 .list_name  .item').click(function(){
       id = $(this).attr('id');
       $('.block-strengths2-style2 .list_name  .item').removeClass('active');
@@ -119,6 +177,7 @@ $(document).ready(function () {
 			$('#search_form').css('width','0px');
 		$('#search_form').css('transform','rotateY(90deg)');
 	});
+
    $('.acat').click(function(){
       parent = $(this).attr("data-parent");
       $('.acat_'+parent).removeClass('active');
